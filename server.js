@@ -29,7 +29,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost/newsScraper");
+mongoose.connect("mongodb://heroku_50gzk7f6:1k7njf6gaaklvc9jcgruj2en9g@ds137271.mlab.com:37271/heroku_50gzk7f6");
 var db = mongoose.connection;
 
 db.on("error", function(error) {
