@@ -20,6 +20,8 @@ mongoose.Promise = Promise;
 
 var app = express();
 
+var PORT = process.env.PORT || 3000;
+
 // app.use(logger("dev"));
 app.use(bodyParser.urlencoded({
     extended: false
@@ -214,6 +216,6 @@ app.delete("/savedarticles", function(req, res) {
     });
 });
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
     console.log("App running on port 3000!");
 });
